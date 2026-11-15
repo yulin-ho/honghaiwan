@@ -34,6 +34,8 @@
 
   /* 大数字块（shadcn 式：标签小字 + 数字大字 + 说明小字） */
   .metric{background:var(--panel);border-radius:10px;padding:18px 20px}
+  .hl{background:#e9f1fa}
+  @media(max-width:760px){.topbar{flex-direction:column;align-items:stretch;padding:12px 16px;gap:6px}.topbar nav{width:100%;gap:0}.topbar nav button{flex:1;text-align:center;padding:10px 0}}
   .metric .m-label{font-size:12px;color:var(--ink2)}
   .metric .m-value{font-size:40px;font-weight:800;color:var(--sea);line-height:1.15;font-variant-numeric:tabular-nums;margin-top:2px}
   .metric .m-value .unit{font-size:18px;font-weight:600;color:var(--ink2);margin-left:3px}
@@ -226,17 +228,17 @@
     <!-- 右：大数字 + 构成 -->
     <div class="calc-right">
       <div class="three">
-        <div class="metric">
+        <div class="metric hl">
           <div class="m-label">年度测算利润</div>
           <div class="m-value orange"><span id="k-total-profit">0</span><span class="unit">万</span></div>
           <div class="m-sub" id="s-total-profit"></div>
         </div>
-        <div class="metric">
+        <div class="metric hl">
           <div class="m-label">静态回收期</div>
           <div class="m-value"><span id="k-payback">0</span><span class="unit">年</span></div>
           <div class="m-sub" id="s-payback"></div>
         </div>
-        <div class="metric">
+        <div class="metric hl">
           <div class="m-label">日均盈亏平衡营收</div>
           <div class="m-value"><span id="k-breakeven">0</span><span class="unit">万</span></div>
           <div class="m-sub" id="s-breakeven"></div>
@@ -351,7 +353,7 @@
       <tr><td style="padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top">什么时候卖</td><td style="padding:7px 8px;border-bottom:1px solid var(--line)">有明确日期、场次和可订座位时再发。如周四发布周末可订落日席，客人回复日期和人数即可预约。</td></tr>
       <tr><td style="padding:7px 8px;vertical-align:top">会员什么时候做</td><td style="padding:7px 8px">先跑一轮，看有没有人按次回来、买的是什么。等常客需求清楚，再试<b>免费会员</b>，权益先做<b>优先订位</b>。</td></tr>
     </table>
-    <div style="margin-top:14px;padding:12px 14px;background:var(--sand);border-radius:8px">
+    <div style="margin-top:14px;padding:12px 14px;background:#e9f1fa;border-radius:8px">
       <div style="font-size:12px;color:var(--ink2)">主指标</div>
       <div style="font-size:18px;font-weight:800;color:var(--orange);margin-top:2px">本地及周边首访客的 180 天付费复购率</div>
       <div style="font-size:12px;color:var(--ink3);margin-top:4px">从首笔到店消费起算，180 天内再次到店并付费才算复购，带新朋友单独标记；只统计观察满 180 天的客人。分档观察：30 天（本地高频）/ 90 天（湾区）/ 180 天（全国＋跨季）。</div>
