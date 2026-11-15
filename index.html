@@ -16,7 +16,9 @@
   body{font-family:"Source Han Sans SC","Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
 
   /* 顶栏 */
-  .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  .topbar{display:flex;flex-direction:column;gap:8px;padding:12px 20px;background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  .topbar nav{display:flex;gap:6px}
+  .topbar nav button{flex:1;text-align:center;padding:10px 0}
   .brand{font-size:14px;font-weight:700;color:var(--sea);line-height:1.35}
   .brand-sub{font-size:12px;font-weight:600;color:var(--sea-2)}
   nav{display:flex;gap:20px}
@@ -34,8 +36,8 @@
 
   /* 大数字块（shadcn 式：标签小字 + 数字大字 + 说明小字） */
   .metric{background:var(--panel);border-radius:10px;padding:18px 20px}
-  .hl{background:#d6e4f0}
-  @media(max-width:760px){.topbar{flex-direction:column;align-items:stretch;padding:12px 16px;gap:6px}.topbar nav{width:100%;gap:0}.topbar nav button{flex:1;text-align:center;padding:10px 0}}
+  .hl{background:#cfe3f5}
+  @media(max-width:760px){.topbar{padding:10px 14px}}
   .metric .m-label{font-size:12px;color:var(--ink2)}
   .metric .m-value{font-size:40px;font-weight:800;color:var(--sea);line-height:1.15;font-variant-numeric:tabular-nums;margin-top:2px}
   .metric .m-value .unit{font-size:18px;font-weight:600;color:var(--ink2);margin-left:3px}
